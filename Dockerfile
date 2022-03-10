@@ -1,4 +1,4 @@
-ARG NC_VERSION=22
+ARG NC_VERSION=stable
 FROM nextcloud:${NC_VERSION}-fpm-alpine
 LABEL maintainer="jmm@yavook.de"
 

@@ -1,0 +1,53 @@
+---
+kind: pipeline
+name: default
+type: docker
+
+steps:
+- name: nextcloud stable
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: stable
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION: stable
+
+- name: nextcloud 21
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 21
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION: 21
+
+- name: nextcloud 22
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 22
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION: 22
+
+- name: nextcloud 23
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 23
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION: 23
