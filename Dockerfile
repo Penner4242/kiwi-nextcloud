@@ -55,7 +55,7 @@ RUN set -ex; \
     cd /opt/nginx; \
     # install nginx.conf
     patch -p1 < nginx.conf.patch; \
-    rm nginx.conf.patch; \
+    rm -f nginx.conf.patch nginx.conf.orig; \
     mv nginx.conf /etc/nginx/nginx.conf; \
     \
     mkdir -p /etc/s6-overlay/s6-rc.d/run_nginx; \
