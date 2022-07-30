@@ -14,7 +14,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION: stable
+      - NC_VERSION=stable
 
 - name: nextcloud 21
   image: plugins/docker
@@ -26,7 +26,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION: 21
+      - NC_VERSION=21
 
 - name: nextcloud 22
   image: plugins/docker
@@ -38,7 +38,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION: 22
+      - NC_VERSION=22
 
 - name: nextcloud 23
   image: plugins/docker
@@ -50,7 +50,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION: 23
+      - NC_VERSION=23
 
 - name: nextcloud 24
   image: plugins/docker
@@ -62,4 +62,4 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION: 24
+      - NC_VERSION=24
