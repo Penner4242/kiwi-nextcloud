@@ -51,3 +51,15 @@ steps:
       from_secret: DOCKER_PASSWORD
     build_args:
       - NC_VERSION: 23
+
+- name: nextcloud 24
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 24
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION: 24
