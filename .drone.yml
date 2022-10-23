@@ -16,6 +16,18 @@ steps:
     build_args:
       - NC_VERSION=stable
 
+- name: nextcloud latest
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: latest
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION=latest
+
 - name: nextcloud 21
   image: plugins/docker
   settings:
@@ -63,3 +75,26 @@ steps:
       from_secret: DOCKER_PASSWORD
     build_args:
       - NC_VERSION=24
+
+- name: nextcloud 25
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 25
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION=25
+
+- name: parallelism provider
+  image: alpine
+  depends_on:
+    - nextcloud stable
+    - nextcloud latest
+    - nextcloud 21
+    - nextcloud 22
+    - nextcloud 23
+    - nextcloud 24
+    - nextcloud 25
