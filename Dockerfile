@@ -32,7 +32,7 @@ CMD [ "/command/with-contenv", "/entrypoint.sh", "php-fpm" ]
 # configure php-fpm
 #########
 
-COPY zzz-kiwi.conf /usr/local/etc/php-fpm.d/zzz-kiwi.conf;
+COPY zzz-kiwi.conf /usr/local/etc/php-fpm.d/zzz-kiwi.conf
 
 #########
 # add nginx
