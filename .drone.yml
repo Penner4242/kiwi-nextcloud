@@ -14,7 +14,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=stable
+      - NC_VERSION=stable-fpm-alpine
 
 - name: nextcloud latest
   image: plugins/docker
@@ -26,7 +26,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=latest
+      - NC_VERSION=fpm-alpine
 
 - name: nextcloud 21
   image: plugins/docker
@@ -38,7 +38,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=21
+      - NC_VERSION=21-fpm-alpine
 
 - name: nextcloud 22
   image: plugins/docker
@@ -50,7 +50,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=22
+      - NC_VERSION=22-fpm-alpine
 
 - name: nextcloud 23
   image: plugins/docker
@@ -62,7 +62,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=23
+      - NC_VERSION=23-fpm-alpine
 
 - name: nextcloud 24
   image: plugins/docker
@@ -74,7 +74,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=24
+      - NC_VERSION=24-fpm-alpine
 
 - name: nextcloud 25
   image: plugins/docker
@@ -86,7 +86,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-      - NC_VERSION=25
+      - NC_VERSION=25-fpm-alpine
 
 - name: parallelism provider
   image: alpine

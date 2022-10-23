@@ -1,5 +1,5 @@
 ARG NC_VERSION=stable
-FROM nextcloud:${NC_VERSION}-fpm-alpine
+FROM nextcloud:${NC_VERSION}
 LABEL maintainer="jmm@yavook.de"
 
 #########
