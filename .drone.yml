@@ -102,6 +102,9 @@ steps:
 
 - name: parallelism provider
   image: alpine
+  when:
+    branch:
+    - master
   depends_on:
     - nextcloud stable
     - nextcloud latest
