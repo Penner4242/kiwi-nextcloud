@@ -28,18 +28,6 @@ steps:
     build_args:
       - NC_VERSION=fpm-alpine
 
-- name: nextcloud 22
-  image: plugins/docker
-  settings:
-    repo: yavook/kiwi-nextcloud
-    tags: 22
-    username:
-      from_secret: DOCKER_USERNAME
-    password:
-      from_secret: DOCKER_PASSWORD
-    build_args:
-      - NC_VERSION=22-fpm-alpine
-
 - name: nextcloud 23
   image: plugins/docker
   settings:
@@ -108,7 +96,6 @@ steps:
   depends_on:
     - nextcloud stable
     - nextcloud latest
-    - nextcloud 22
     - nextcloud 23
     - nextcloud 24
     - nextcloud 25
