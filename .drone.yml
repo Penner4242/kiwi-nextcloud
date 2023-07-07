@@ -88,6 +88,18 @@ steps:
     build_args:
       - NC_VERSION=26-fpm-alpine
 
+- name: nextcloud 27
+  image: plugins/docker
+  settings:
+    repo: yavook/kiwi-nextcloud
+    tags: 27
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+      - NC_VERSION=27-fpm-alpine
+
 - name: parallelism provider
   image: alpine
   depends_on:
@@ -98,3 +110,4 @@ steps:
     - nextcloud 24
     - nextcloud 25
     - nextcloud 26
+    - nextcloud 27
