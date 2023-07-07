@@ -6,6 +6,9 @@ type: docker
 steps:
 - name: nextcloud stable
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: stable
@@ -18,6 +21,9 @@ steps:
 
 - name: nextcloud latest
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: latest
@@ -30,6 +36,9 @@ steps:
 
 - name: nextcloud 23
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: 23
@@ -42,6 +51,9 @@ steps:
 
 - name: nextcloud 24
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: 24
@@ -54,6 +66,9 @@ steps:
 
 - name: nextcloud 25
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: 25
@@ -66,6 +81,9 @@ steps:
 
 - name: nextcloud 26
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: 26
@@ -78,6 +96,9 @@ steps:
 
 - name: nextcloud 27
   image: plugins/docker
+  when:
+    branch:
+    - master
   settings:
     repo: yavook/kiwi-nextcloud
     tags: 27
@@ -90,9 +111,6 @@ steps:
 
 - name: parallelism provider
   image: alpine
-  when:
-    branch:
-    - master
   depends_on:
     - nextcloud stable
     - nextcloud latest
